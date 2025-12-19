@@ -2,12 +2,13 @@
 const hotels = [
     {
         id: 1,
-        name: "Ashok Vilas",
+        name: "Ashok Pandey Vilas",
         location: "Buxar, Bihar",
         address: "123 Ocean Paradise Road, Male Atoll, Maldives 20026",
         phone: "+960 400-1234",
         rating: 4.9,
         pricePerNight: 2500,
+        coordinates: { lat: 25.5643, lng: 83.9778 }, // Buxar coordinates
         badge: "Luxury",
         description: "Experience unparalleled luxury at The Grand Azure Resort, where crystal-clear waters meet pristine white sand beaches. Our overwater villas offer breathtaking views of the Indian Ocean, while our world-class spa and dining experiences will leave you refreshed and rejuvenated. Perfect for romantic getaways and those seeking the ultimate in relaxation.",
         amenities: [
@@ -28,12 +29,13 @@ const hotels = [
     },
     {
         id: 2,
-        name: "Aryan Lodge",
+        name: "Aryan Kumar Lodge",
         location: "Gaya, Bihar",
         address: "456 Alpine Heights, Zermatt, Switzerland 3920",
         phone: "+41 27 966 0000",
         rating: 4.8,
         pricePerNight: 580,
+        coordinates: { lat: 24.7955, lng: 84.9994 }, // Gaya coordinates
         badge: "Featured",
         description: "Nestled in the heart of the Swiss Alps, Mountain Peak Lodge offers spectacular views of the Matterhorn and surrounding peaks. Our cozy rooms feature traditional Alpine decor with modern amenities. Enjoy world-class skiing in winter and hiking trails in summer, followed by gourmet Swiss cuisine and our famous fondue nights.",
         amenities: [
@@ -60,6 +62,7 @@ const hotels = [
         phone: "+1 212-555-0123",
         rating: 4.7,
         pricePerNight: 1320,
+        coordinates: { lat: 25.5515, lng: 84.1526 }, // Dumraon coordinates
         badge: "Trending",
         description: "Located in the heart of Manhattan, Urban Boutique Hotel combines contemporary design with timeless elegance. Steps away from Central Park and world-famous shopping, our hotel offers a tranquil retreat in the city that never sleeps. Each room features curated artwork and floor-to-ceiling windows with stunning city views.",
         amenities: [
@@ -86,6 +89,7 @@ const hotels = [
         phone: "+81 75-561-1234",
         rating: 4.9,
         pricePerNight: 3290,
+        coordinates: { lat: 25.5667, lng: 83.9833 }, // Buxar coordinates
         badge: "Cultural",
         description: "Experience authentic Japanese hospitality at Sakura Garden Inn. Our traditional ryokan features tatami rooms, private onsen baths, and serene Japanese gardens. Located near historic temples and the famous Gion district, immerse yourself in Japanese culture while enjoying modern comforts and kaiseki cuisine.",
         amenities: [
@@ -112,8 +116,9 @@ const hotels = [
         phone: "+30 22860 71234",
         rating: 4.8,
         pricePerNight: 4420,
-        badge: "Cultural",
-        description: "Perched on the cliffs of Oia, Santorini Sunset Villa offers the most spectacular sunset views in the Mediterranean. Our whitewashed suites with private terraces overlook the famous caldera. Enjoy infinity pools, gourmet Greek cuisine, and the Cultural ambiance that makes Santorini a dream destination for family.",
+        coordinates: { lat: 25.5520, lng: 84.1530 }, // Dumraon coordinates
+        badge: "Romantic",
+        description: "Perched on the cliffs of Oia, Santorini Sunset Villa offers the most spectacular sunset views in the Mediterranean. Our whitewashed suites with private terraces overlook the famous caldera. Enjoy infinity pools, gourmet Greek cuisine, and the romantic ambiance that makes Santorini a dream destination for couples.",
         amenities: [
             { name: "Infinity Pool", icon: "🏊" },
             { name: "Sunset Views", icon: "🌅" },
@@ -138,6 +143,7 @@ const hotels = [
         phone: "+255 27 250 8100",
         rating: 4.9,
         pricePerNight: 550,
+        coordinates: { lat: 25.6093, lng: 85.1376 }, // Patna coordinates
         badge: "Adventure",
         description: "Experience the magic of the African savanna at Safari Wilderness Camp. Our luxury tented suites offer front-row seats to the Great Migration and incredible wildlife encounters. Expert guides lead daily game drives, while evenings feature gourmet bush dinners under the stars. An unforgettable adventure awaits.",
         amenities: [

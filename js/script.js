@@ -107,6 +107,9 @@ function initDetailPage() {
     
     // Initialize lightbox
     initLightbox(hotel.images);
+    
+    // Initialize map
+    initMap(hotel);
 }
 
 function renderHotelDetail(hotel) {
@@ -188,6 +191,9 @@ function renderHotelDetail(hotel) {
                         </div>
                     </div>
                 </div>
+                
+                <h2>Location Map</h2>
+                <div id="hotel-map" class="hotel-map"></div>
             </div>
             
             <!-- Booking Calculator -->
@@ -413,5 +419,37 @@ function changeLightboxImage(direction) {
 function updateLightboxCounter() {
     const counter = document.getElementById('lightbox-counter');
     counter.textContent = `${currentImageIndex + 1} / ${lightboxImages.length}`;
+}
+
+// ========================================
+// Map Integration
+// ========================================
+
+function initMap(hotel) {
+    if (!hotel.coordinates) return;
+    
+    const { lat, lng } = hotel.coordinates;
+    
+    // Initialize the map
+    const map = L.map('hotel-map').setView([lat, lng], 15);
+    
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+    
+    // Custom marker icon
+    const hotelIcon = L.divIcon({
+        className: 'custom-marker',
+        html: `<div class="marker-pin">📍</div>`,
+        iconSize: [40, 40],
+        iconAnchor: [20, 40]
+    });
+    
+    // Add marker
+    L.marker([lat, lng], { icon: hotelIcon })
+        .addTo(map)
+        .bindPopup(`<strong>${hotel.name}</strong><br>${hotel.address}`)
+        .openPopup();
 }
 
