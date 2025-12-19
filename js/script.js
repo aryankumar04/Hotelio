@@ -61,7 +61,7 @@ function createHotelCard(hotel) {
             <p class="hotel-card-location">${hotel.location}</p>
             <div class="hotel-card-footer">
                 <div class="hotel-price">
-                    $${hotel.pricePerNight}<span>/night</span>
+                    ₹${hotel.pricePerNight}<span>/night</span>
                 </div>
                 <button class="hotel-view-btn">View Details</button>
             </div>
@@ -144,7 +144,7 @@ function renderHotelDetail(hotel) {
             </div>
             <div class="hotel-price-badge">
                 <div class="price-label">Starting from</div>
-                <div class="price-value">$${hotel.pricePerNight}<span>/night</span></div>
+                <div class="price-value">₹${hotel.pricePerNight}<span>/night</span></div>
             </div>
         </div>
         
@@ -224,7 +224,7 @@ function renderHotelDetail(hotel) {
                     <div class="calculator-result" id="calculator-result">
                         <div class="result-row">
                             <span>Room Rate</span>
-                            <span id="room-rate">$${hotel.pricePerNight} × 0 nights</span>
+                            <span id="room-rate">₹${hotel.pricePerNight} × 0 nights</span>
                         </div>
                         <div class="result-row">
                             <span>Rooms</span>
@@ -232,11 +232,11 @@ function renderHotelDetail(hotel) {
                         </div>
                         <div class="result-row">
                             <span>Taxes & Fees (12%)</span>
-                            <span id="taxes">$0</span>
+                            <span id="taxes">₹0</span>
                         </div>
                         <div class="result-row total">
                             <span>Total</span>
-                            <span id="total-price">$0</span>
+                            <span id="total-price">₹0</span>
                         </div>
                     </div>
                     <button type="button" class="book-btn" onclick="handleBooking()">
@@ -328,10 +328,10 @@ function calculatePrice() {
     const total = subtotal + taxes;
     
     // Update display
-    document.getElementById('room-rate').textContent = `$${pricePerNight} × ${nights} night${nights > 1 ? 's' : ''}`;
+    document.getElementById('room-rate').textContent = `₹${pricePerNight} × ${nights} night${nights > 1 ? 's' : ''}`;
     document.getElementById('room-count').textContent = `× ${roomCount} room${roomCount > 1 ? 's' : ''}`;
-    document.getElementById('taxes').textContent = `$${taxes.toFixed(2)}`;
-    document.getElementById('total-price').textContent = `$${total.toFixed(2)}`;
+    document.getElementById('taxes').textContent = `₹${taxes.toFixed(2)}`;
+    document.getElementById('total-price').textContent = `₹${total.toFixed(2)}`;
 }
 
 function handleBooking() {
