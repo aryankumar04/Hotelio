@@ -2,7 +2,7 @@
 const hotels = [
     {
         id: 1,
-        name: "Ashok Pandey Vilas",
+        name: "Ashok Vilas",
         location: "Buxar, Bihar",
         address: "123 Ocean Paradise Road, Male Atoll, Maldives 20026",
         phone: "+960 400-1234",
@@ -29,7 +29,7 @@ const hotels = [
     },
     {
         id: 2,
-        name: "Aryan Kumar Lodge",
+        name: "Aryan Lodge",
         location: "Gaya, Bihar",
         address: "456 Alpine Heights, Zermatt, Switzerland 3920",
         phone: "+41 27 966 0000",
